@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-h1, h2, h3, h4, h5, h5, h6, span {
+h1, h2, h3, h4, h5, h6, span {
 color: #242424;
 text-align: center;
 line-height: 1.25;
@@ -145,11 +145,11 @@ nav {
     padding-top: 16px;
 }
  
-.about-me__infor--title {
+.about-me__info--title {
     margin-bottom: 16px;
 } 
 
-.about-me__infor--para {
+.about-me__info--para {
     font-size: 20px;
     margin-bottom: 28px;
 }
