@@ -85,9 +85,6 @@ li {
 .text--purple {
     color: #6030b1;
 }
-.text--purple {
-    color: #6030b1;
-}
 
 section:nth-child(even) {
     background-color: #f8f8f8;
@@ -95,46 +92,45 @@ section:nth-child(even) {
   
 .section__title {
     margin-bottom: 20px;
-  }
+}
 
 
 /* NAVIGATION BAR */
 
-.nav__link--list {
-    display: flex;
-}
-
-.nav__link--anchor {
-    margin: 0 12px;
-    color: black;
-    font-weight: 700;
-}
-
 nav {
     height: 100px;
-      width: 100%;
-      max-width: 1000px;
-      margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 12px;
+}
+.nav__link--list {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 12px;
-
-}
-
-.nav__link--anchor-primary {
-    background-color: #6030b1;
-    padding: 8px 20px;
-    border-radius: 50px;
-    color: white;
-    transition: all 300ms ease;
+    }
     
-}
-
-.nav__link--anchor-primary:hover {
-    background-color: #5d3eff;
-}
-
+    .nav__link--anchor {
+        margin: 0 12px;
+        color: #242424;
+        font-weight: 700;
+    }
+    
+    
+    .nav__link--anchor-primary {
+        background-color: #6030b1;
+        padding: 8px 20px;
+        border-radius: 50px;
+        color: white;
+        transition: all 300ms ease;
+        
+    }
+    
+    .nav__link--anchor-primary:hover {
+        background-color: #5d3eff;
+    }
+    
 .personal__logo {
     font-size: 24px;
     color: #6030b1;
@@ -145,27 +141,16 @@ nav {
 
 /* ABOUT ME */
 
-.about-me__info {
-    display: flex;
-    flex-direction: column;
-}
 #about-me {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-@keyframes fade-up {
-    0% {
-        opacity: 0;
-        transform: translatey(40px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.about-me__info {
+    display: flex;
+    flex-direction: column;
 }
-
 
 .about-me__info--container {
     display: flex;
@@ -187,7 +172,6 @@ nav {
     margin-top: 28px;
     animation: animate-profile-picture 800ms 200ms backwards; 
 }
-
 @keyframes animate-profile-picture {
     0% {
         transform: scale(0);
@@ -195,9 +179,12 @@ nav {
     80% {
         transform: scale(1.1);
     }
+    100% {
+        transform: scale(1);
+    }
 
 }
- 
+
 .about-me__picture {
     width: 100%;
     
@@ -224,6 +211,21 @@ nav {
     padding: 0 16px;
 }
 
+about-me__links {
+    animation: fade-up 650ms 800ms backwards;
+  }
+  
+  @keyframes fade-up {
+    0% {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
 .about-me__img--container {
     flex: 1;
     display: flex;
@@ -260,12 +262,10 @@ nav {
         }
     }
 
-
-.about-me__img {
-    width: 100%;
-    margin-top: 80px;
-   
-}
+    .about-me__img {
+        width: 100%;
+        margin-top: 60px;
+    }
 
 /* TECH - STACK */
 
@@ -334,7 +334,6 @@ margin-bottom: 40px;
     transition: all 500ms ease;
 }
 
-
 .project__wrapper {
     display: flex;
     box-shadow: 0 20px 80px rgba(0, 0, 0, 0.45);
@@ -354,9 +353,11 @@ margin-bottom: 40px;
     opacity: 0;
     transition: opacity 450ms ease;
     z-index: 2;
+    transform: translateY(100%);
 }
 
  .project:hover .project__wrapper:before {
+    transform: translateY(0);
     opacity: 0.7;
  }
 
@@ -385,7 +386,7 @@ margin-bottom: 40px;
  }
 
  .project__description--title {
-    font-size: 48px;
+    font-size: 40px;
  }
 
 .project__description--para {
@@ -394,7 +395,7 @@ margin-bottom: 40px;
 
 .project__description--link {
     font-size: 20px;
-    margin: 16;
+    margin-right: 16px;
     text-decoration: none;
 }
 
@@ -424,19 +425,19 @@ margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 8% 0;
  }
+
 .footer__logo--img {
-    width: 100px;
+    width: 80px;
     height: 80px;
 }
 
 .footer__social--link,
 .footer__copyright,
 .footer__logo--popper {
-    display: flex;
-    justify-content: center;    
-    color: #ffffff;
+    color: #fff;
 }
 
 .footer__logo--popper {
@@ -476,7 +477,7 @@ h1 {
 }
 
 .language {
-    width: calc(100%/3);
+    width: calc(100%/4);
 }
 
 .project__description--para {
@@ -495,6 +496,9 @@ h1 {
         display: none;
 }
 
+.project__wrapper {
+    border-radius: 0;
+}
 .project__description {
     padding: 0;
     left: 0;
@@ -502,7 +506,6 @@ h1 {
 }
 .project__description--para {
     display: none;
-    justify-content: center;
 }
 
 .project__description--links {
